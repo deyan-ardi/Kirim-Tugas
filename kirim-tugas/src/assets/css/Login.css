@@ -1,0 +1,151 @@
+main {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    overflow: auto;
+}
+
+.login-container {
+    width: 45rem;
+    height: 30rem;
+    min-width: 45rem;
+    min-height: 30rem;
+    margin: auto;
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    background-color: #ffc491;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.login-header {
+    width: 60%;
+    height: 100%;
+    background-color: #20242b;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-header i {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.login-main {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #20242b;
+}
+
+.in {
+    border: 2px solid #20242b;
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-radius: 0.8rem;
+}
+
+.in label {
+    padding-right: 0.5rem;
+}
+
+.in:focus-within {
+    transition: 0.2s;
+    border-color: black;
+    color: black;
+}
+
+.submit {
+    display: flex;
+    justify-items: center;
+    margin-top: 1rem;
+}
+
+.error {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* basic element */
+input {
+    background: none;
+    border: none;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #20242b;
+    color: white;
+    border: none;
+    margin: auto;
+    padding: 0.7rem 6rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    transition: .2s;
+    background-color: black;
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* responsive */
+@media screen and (max-width: 550px) {
+    .login-container {
+        width: 100vw;
+        height: 100vh;
+        min-width: unset;
+        min-height: unset;
+        border-radius: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-header {
+        width: unset;
+        height: 40vh;
+        background-color: #ffc491;
+        color: #20242b;
+        justify-content: flex-end;
+        padding-bottom: 4rem;
+    }
+
+    .login-header i {
+        margin-bottom: 2rem;
+    }
+
+    .login-main {
+        width: 70vw;
+        height: unset;
+        justify-content: flex-start;
+        align-items: unset;
+    }
+
+    .in {
+        padding: 0.8rem 0.8rem;
+        border-radius: .9rem;
+    }
+
+    button[type="submit"] {
+        padding: 1.1rem 0;
+        width: 100%;
+        border-radius: 0.8rem;
+    }
+}
